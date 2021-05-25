@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar{
+    position: fixed; /* kunai change auna latter mah */
+   background: crimson;
+    width: 100%;
+    font-family: 'ubuntu', sans-serif;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar .max-width{
+       display: flex;
+       align-items: center;
+       justify-content: space-between; /* letter lai pura left lani kam grxa */
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 300px;
+
+}
+.navbar .logo a span{
+    color:black;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block; /* list lai autai line mah lerw auni */
+
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s  ease;
+}
+.navbar .menu li a:hover{
+    color: black;
+}
+/* Menu button styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+
+}
+.scroll-bar-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    background:crimson ;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height:45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.scroll-bar-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+
+}
+/* Home section Styling */
+.home{
+    display: flex;
+    height: 100vh;
+    background-image: url("/Users/ayushadhikari/Documents/Portfolio/project.jpg");
+    color: white;
+    min-height: 500px;
+    font-family:'ubuntu', sans-serif ;
+
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-right: -3px;
+}
+.home .home-content .text-3{
+    font-size: 45px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+} 
+/* all similar content styling code */
+section{
+    padding: 100px 0;
+}
+.about, .services, .skills{
+    font-family: "Poppins", sans-serif;
+}
+.about .about-content,
+     .services .services-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
+
+section .title{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'ubuntu', sans-serif;
+    margin-left: 100px;
+    margin-bottom: 60px;
+
+}
+section .title::after{
+    position: absolute;
+    bottom: -165px;
+    left: 53%;
+    font-size: 20px;
+    padding: 1px;
+    color: crimson;
+    background: #fff;
+    transform: translateX(-50%);
+} 
+/* About Section Styling */
+.about, .services, .skills, .contact{
+    font-family: "Poppins", sans-serif;
+}
+/*
+section .title::after{
+    content: "";
+}
+
+
+section .title::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background: #111;
+    margin-top:50px;
+    margin-left: 81px;
+    transform: translateX(-50%);
+    color: red;
+    }
+    */
+    .about .about-content,
+     .services .services-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .about .about-content .column-left{
+        width: 45%;
+    }
+.about .about-content .column-left img{
+    height: 400px;
+    width: 400px;
+   object-fit: cover;
+    padding-right:10px;
+    border-radius: 6px;
+}
+.about .about-content .column-right{
+    width: 55%;
+}
+.about .about-content .column-right .text{
+    font-size: 25px;
+}
+.about .about-content .column-right p{
+    text-align: justify;
+}
+.about .about-content .column-right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+
+}
+.about .about-content .column-right a:hover{
+    color: crimson;
+    background: none;
+}
+/* Service Section Styling */
+.services{
+   background: black;
+   color: #fff;
+    
+}
+.services .services-content .card{
+    width: calc(33% - 20px);
+    text-align: center;
+    background: #111;
+    padding: 20px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3 ease;
+}
+.services .services-content .card  .box{
+    transition: all 0.3 ease;
+}
+.services .services-content .card:hover{
+    background-color: crimson;
+
+
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+
+}
+.services .services-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color all 0.3 ease;
+}
+.services .services-content .card:hover i{
+   color: #fff;
+    
+
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+}
+/* Skills Section Styling */
+.skills{
+    background-color: skyblue;
+}
+.skills .skills-content .column-left{
+    content: none;
+}
+.skills .skills-content .column-left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.skills .skills-content .column-right .bars{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.skills .skills-content .column-right .info{
+    display: flex;
+    margin-bottom:5px;
+    text-align: center;
+    justify-content: space-between;
+}
+.skills .skills-content .column-right span {
+    font-weight: 500;
+    font-size: 20px;
+}
+.skills .skills-content .column-right .line{
+    background: lightgray;
+    width:100%;
+    height: 5px;
+    position: relative;
+}
+.skills .skills-content .column-right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .column-right .html::before{
+    width: 60%;
+}
+.skills-content .column-right .js::before{
+    width: 20%;
+}
+.skills-content .column-right .css::before{
+    width: 40%;
+}
+.fcc-btn {
+    background-color:crimson;
+    padding: 10px 16px;
+    color: white;
+    font-size: 20px;
+    margin-left: 700px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3 ease;
+  }
+  .fcc-btn:hover{
+      color:black;
+      background:none;
+  }
+
+  /* contact section styling */
+  .contact .max-width .title{
+      font-size: 40px;
+      font-weight: 600;
+  }
+  .contact .max-width .icon{
+      padding: 10px;
+  }
+  .contact .max-width .icon .row .info{
+      margin-right: 40px;
+      margin-bottom: 50px;
+  }
+  .contact .max-width .icon i{
+      font-size: 30px;
+      color: crimson;
+  }
+  .contact .max-width .icon .row .info .head{
+      font-weight: 700;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Responsive Media query Start */
+ @media (max-width: 947px){   
+     .max-width{
+         padding: 50px;
+     }
+     .menu-btn{
+         display: block;
+         z-index: 999;
+     }
+     .menu-btn i.active:before{      /* cross sign logic with javascript */
+         content: "\f00d";
+         background: black;
+     }
+     .navbar .menu{
+         position: fixed;
+         height: 100vh;
+         width: 100%;
+         left: -100%;
+         top: 0;
+         background: #111;
+         text-align:center;
+         padding-top: 80px;
+         transition: all 0.3s ease;
+        }
+        .navbar .menu.active{  /* Error ako yei nirw ho teo wala */
+            left: 0;
+
+        }
+        .navbar .menu li{
+            display: block;
+        }
+        .navbar .menu li a{
+
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 25px;
+        }
+        .navbar .menu li a:hover{
+            background-color: red;
+        }
+        .home .home-content .text-2{
+            font-size: 75px;
+            font-weight: 600;
+            margin-right: -3px;
+        }
+        .home .home-content .text-3{
+            font-size: 45px;
+            margin: 5px 0;
+        }
+
+    }
+    .home .home-content a{
+        display: inline-block;
+        background: crimson;
+        color: #fff;
+        font-size: 25px;
+        padding: 12px 32px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid crimson;
+        transition: all 0.3s ease;
+    }
+
+    .home .home-content a:hover{
+       background:none;
+       color:#fff;
+    }
+    
+    @media (max-width: 690px){
+        .services .services-content .card{
+            width: 100%;
+        }   
+    }
+    @media (max-width: 679px){
+   .about .about-content .column-right{
+        text-align: justify;
+        width: 100%;
+    }
+}
+@media (max-width: 679px){
+    
+}
